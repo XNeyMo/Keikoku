@@ -1,0 +1,13 @@
+---
+import LandingPageLayout from "../layouts/LandingPageLayout.astro";
+import Header from "../components/Header.astro";
+import Information from "../components/Information";
+---
+
+<LandingPageLayout>
+    <Header />
+
+    <section class="bg-interlightcolor h-screen py-20 px-12">
+        <Information client:load />
+    </section>
+</LandingPageLayout>
