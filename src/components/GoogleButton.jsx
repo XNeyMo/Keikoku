@@ -2,7 +2,8 @@ import React from 'react';
 
 const GoogleButton = (/*{ onClick }*/) => {
   const handleGoogleLogin = () => {
-    console.log('Iniciar sesión con Google');
+    var profile = googleUser.getBasicProfile();
+    console.log(profile.getName());
     //onClick();
   };
 
@@ -17,3 +18,6 @@ const GoogleButton = (/*{ onClick }*/) => {
 };
 
 export default GoogleButton;
+
+// 71727447822-hqirilmtmo874ghlt9i8eoefhtm73220.apps.googleusercontent.com 
+// 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
