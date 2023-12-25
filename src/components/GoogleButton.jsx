@@ -2,6 +2,7 @@ import React from 'react';
 
 const GoogleButton = (/*{ onClick }*/) => {
   const handleGoogleLogin = () => {
+    var googleUser;
     var profile = googleUser.getBasicProfile();
     console.log(profile.getName());
     //onClick();
