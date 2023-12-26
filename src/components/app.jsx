@@ -19,6 +19,22 @@ function App() {
             }catch (error) {
                 console.log(error);
             }
+
+            db.collection("users").add({
+                id: user.id,
+                email: user.email,
+                name: user.name,
+                last_name: user.last_name,
+                pic: user.pic,
+            }); 
+            then((docRef) => {
+                console.log("Document written with ID: ", docRef.id);
+            })
+            .catch((error) => {
+                console.error("Error adding document: ", error);
+            });
+
+
         
         };
 

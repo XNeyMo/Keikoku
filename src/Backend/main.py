@@ -16,3 +16,5 @@ def dashboard(request: Request):
         name="dashboard.astro",
         context={"request": request}
     )
+
+
