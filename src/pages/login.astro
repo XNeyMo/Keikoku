@@ -9,7 +9,7 @@ import InformationCard from "../components/InformationCard.astro";
         <header class="h-full w-6/12 bg-darkcolor text-lightcolor pl-12 pr-36 py-12 flex flex-col justify-evenly">
             <h1 class="text-7xl font-bold">KEIKOKU</h1>
             <p>Looking for a web-based task management app that helps you stay organized and productive? Look no further! Our app lets you create, assign, and track tasks, set reminders, and collaborate with your team. With an intuitive interface and customizable features, you can easily stay on top of your to-do list and achieve your goals.</p>
-            <LogInButton client:only />
+            <LogInButton client:load />
         </header>
 
         <footer class="h-full w-6/12 bg-lightcolor py-12 pr-12 text-right flex flex-col justify-evenly items-end">
