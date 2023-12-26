@@ -1,6 +1,6 @@
 import React from 'react';
 import { signInWithPopup, signOut } from 'firebase/auth';
-import { auth, googleprovider } from '../src/Backend/db/firebase_config/firebase';
+import { auth, googleprovider } from '../Backend/db/firebase_config/firebase';
 import { useState } from 'react';  
 
 
