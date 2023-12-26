@@ -3,7 +3,10 @@ import LogInLayout from "../layouts/LogInLayout.astro";
 import LogInButton from "../components/LogInButton"
 import InformationCard from "../components/InformationCard.astro";
 import Priority from "../assets/priority.svg"
+import fastapi
 ---
+
+redirect = fastapi.redirect
 
 <LogInLayout>
     <main class="flex h-screen bg-lightcolor">
