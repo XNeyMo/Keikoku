@@ -52,4 +52,3 @@ const LogInButton = () => {
 }
 
 export default LogInButton
-export default updateProfile
