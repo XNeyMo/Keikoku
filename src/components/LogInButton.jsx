@@ -10,7 +10,17 @@ const singInWithGoogle = async () => {
   } catch (error) {
     console.log(error)
   }
+
+  user = result.user
+  userName = user.displayName
+  userEmail = user.email
+  userPhoto = user.photoURL
+
 }
+
+
+
+
 
 const logout = async () => {
   try {
