@@ -1,0 +1,42 @@
+---
+import LogInLayout from "../layouts/LogInLayout.astro";
+import LogInButton from "../components/LogInButton"
+import InformationCard from "../components/InformationCard.astro";
+import Priority from "../assets/priority.svg"
+---
+
+<LogInLayout>
+    <main class="flex h-screen bg-lightcolor">
+        <header class="h-full w-6/12 bg-darkcolor text-lightcolor pl-12 pr-36 py-12 flex flex-col justify-evenly">
+            <h1 class="text-7xl font-bold">KEIKOKU</h1>
+            <p>Looking for a web-based task management app that helps you stay organized and productive? Look no further! Our app lets you create, assign, and track tasks, set reminders, and collaborate with your team. With an intuitive interface and customizable features, you can easily stay on top of your to-do list and achieve your goals.</p>
+            <LogInButton />
+        </header>
+
+        <footer class="h-full w-6/12 bg-lightcolor py-12 pr-12 text-right flex flex-col justify-evenly items-end">
+            <InformationCard 
+                imgsrc="../../public/assets/priority.svg"
+                title="Priority Management" 
+                body="Optimize your focus with our smart priorization feature. Tasks are automatically categorized by duration and deadline." 
+            />
+
+            <InformationCard 
+                imgsrc="../../public/assets/organization.svg" 
+                title="Versatile Organization" 
+                body="Tailor your task management experience with the ability to add custom categories." 
+            />
+
+            <InformationCard 
+                imgsrc="../../public/assets/login.svg" 
+                title="Quick Login" 
+                body="Enjoy the inconvenience of one-click acces to your account using Google Account." 
+            />
+        </footer>
+    </main>
+</LogInLayout>
+
+<style>
+    header {
+        clip-path: polygon(0 0, 75% 0, 100% 100%, 0% 100%);
+    }
+</style>
