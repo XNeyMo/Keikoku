@@ -1,19 +1,36 @@
 import React from 'react';
 import { signInWithPopup, signOut } from 'firebase/auth';
-import { auth, googleprovider } from '../../firebase_config/firebase';
+import { auth, googleprovider } from '../src/Backend/db/firebase_config/firebase';
 import { useState } from 'react';  
 
 
 const singInWithGoogle = async () => {
   try {
     await signInWithPopup(auth, googleprovider)
-      
+    
+    const credential = googleprovider.credentialFromResult(result)
+    const token = credential.accessToken
+    const user = result.user
+    
+    console.log(user, token)
+    window.location.href = '/dashboard.astro';
       
 
   } catch (error) {
     console.log(error)
   }
 }
+
+function updateProfile(user) {
+  const userName = user.display
+  const userPic = user.photoURL
+  const userMail = user.email
+
+  document.getElementById('userName').textContent = userName
+
+}
+
+
 
 const logout = async () => {
   try {
