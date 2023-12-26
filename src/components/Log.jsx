@@ -27,6 +27,9 @@ function updateProfile(user) {
   const userMail = user.email
 
   document.getElementById('userName').textContent = userName
+  document.getElementById('userprofilepicture').src = userPic
+  document.getElementById('userMail').textContent = userMail
+  
 
 }
 
@@ -49,3 +52,4 @@ const LogInButton = () => {
 }
 
 export default LogInButton
+export default updateProfile
