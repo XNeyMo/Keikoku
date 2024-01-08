@@ -21,7 +21,7 @@ const { title } = Astro.props;
 			<h1 class="text-center text-3xl font-bold mb-6">KEIKOKU</h1>
 		
 			<div class="h-full">
-				<a href="" class="flex gap-4 items-center">
+				<a href="/" class="flex gap-4 items-center">
 					<img class="w-[25px]" src="/public/assets/dashboard.svg" alt="Dashboard">
 					<h2 class="font-bold">Dashboard</h2>
 				</a>
@@ -51,15 +51,19 @@ const { title } = Astro.props;
 
 		<input class="hidden" type="checkbox" id="btn-list">
 		<form action="" class="hidden fixed top-0 left-0 z-10 list h-screen w-screen bg-darkcolor/[.75] justify-center items-center">
-			<fieldset class="w-6/12 h-4/5 bg-lightcolor p-10 rounded-2xl flex flex-col justify-between">
-				<h2>Add a New List</h2>
+			<fieldset class="w-6/12 bg-lightcolor p-10 rounded-2xl flex flex-col justify-between text-darkcolor">
+				<h2 class="text-5xl font-bold">Add a New List</h2>
 
 				<div class="flex flex-col py-10">
-					<label for="title">Name</label>
-					<input type="text" name="title" id="title">
+					<div class="pb-5 flex flex-col">
+						<label class="font-bold" for="title">Name</label>
+						<input class="px-5" type="text" name="title" id="title" required>
+					</div>
 					
-					<label for="category">Category</label>
-					<input type="text" name="category" id="category">
+					<div class="flex flex-col">
+						<label class="font-bold" for="category">Category</label>
+						<input class="px-5" type="text" name="category" id="category" required>
+					</div>
 				</div>
 				
 				<div class="flex justify-evenly text-lightcolor text-xl text-center font-bold h-[40px]">
@@ -71,18 +75,19 @@ const { title } = Astro.props;
 
 		<input class="hidden" type="checkbox" id="btn-note">
 		<form action="" class="hidden fixed top-0 left-0 z-10 note h-screen w-screen bg-darkcolor/[.75] justify-center items-center">
-			<fieldset class="w-6/12 h-4/5 bg-lightcolor p-10 rounded-2xl flex flex-col justify-between">
-				<h2>Add a New Note</h2>
+			<fieldset class="w-6/12 bg-lightcolor p-10 rounded-2xl flex flex-col justify-between text-darkcolor">
+				<h2 class="text-5xl font-bold">Add a New Note</h2>
 
 				<div class="flex flex-col py-10">
-					<label for="title">Title</label>
-					<input type="text" name="title" id="title">
-					
-					<label for="category">Category</label>
-					<input type="text" name="category" id="category">
+					<div class="pb-5 flex flex-col">
+						<label class="font-bold" for="title">Title</label>
+						<input class="px-5" type="text" name="title" id="title" required>
+					</div>
 
-					<label for="description">Description</label>
-					<textarea name="description" id="description" cols="30" rows="5"></textarea>
+					<div class="flex flex-col">
+						<label class="font-bold" for="description">Description</label>
+						<textarea class="resize-none px-5" name="description" id="description" cols="30" rows="5" required></textarea>
+					</div>
 				</div>
 				
 				<div class="flex justify-evenly text-lightcolor text-xl text-center font-bold h-[40px]">
