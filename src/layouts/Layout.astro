@@ -16,6 +16,38 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<header class="bg-darkcolor w-1/5 py-6 px-6 text-lightcolor h-screen flex flex-col justify-between">
+			<h1 class="text-center text-3xl font-bold mb-6">KEIKOKU</h1>
+		
+			<div class="h-full">
+				<a href="" class="flex gap-4 items-center">
+					<img class="w-[25px]" src="/public/assets/dashboard.svg" alt="Dashboard">
+					<h2 class="font-bold">Dashboard</h2>
+				</a>
+		
+				<div class="my-3">
+					<a class="font-bold flex justify-between mr-20" href="">
+						<h2>Lists</h2>
+						<span>+</span>
+					</a>
+				</div>
+		
+				<div>
+					<a class="font-bold flex justify-between mr-20" href="">
+						<h2>Notes</h2>
+						<span>+</span>
+					</a>
+				</div>
+			</div>
+		
+			<div class="mt-5">
+				<a href="/login" class="flex gap-4 items-center">
+					<img class="w-[25px]" src="/public/assets/logout.svg" alt="Log Out">
+					<h2 class="font-bold">Log Out</h2>
+				</a>
+			</div>
+		</header>
+
 		<slot />
 	</body>
 </html>

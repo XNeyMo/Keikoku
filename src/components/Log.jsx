@@ -26,7 +26,7 @@ function updateProfile(user) {
   const userPic = user.photoURL
   const userMail = user.email
 
-  document.getElementById('userName').textContent = userName
+  document.getElementById('userName').textContent = userName 
   document.getElementById('userprofilepicture').src = userPic
   document.getElementById('userMail').textContent = userMail
   
