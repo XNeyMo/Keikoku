@@ -1,7 +1,10 @@
 ---
+import Schedule from '../components/Schedule';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title='Keikoku'>
-    
+    <div class="p-10 w-4/5">
+        <Schedule client:load />
+    </div>
 </Layout>
